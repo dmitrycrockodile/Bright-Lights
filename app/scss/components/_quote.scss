@@ -1,0 +1,43 @@
+.quote {
+    position: relative;
+
+    &__text {
+        font-size: $default-font-size;
+        line-height: 2.7rem;
+    }
+
+    &__line {
+        width: 100%;
+        height: 1px;
+        opacity: .6;
+        background-color: $color-white;
+        margin: 2.5rem 0;
+    }
+
+    &__link {
+        font-size: $default-font-size;
+        line-height: 2.7rem;
+        color: $color-purple;
+    }
+
+    &__img {
+        position: absolute;
+        top: -8rem;
+        right: 6%;
+
+        @include respond(tab-land) {
+            top: -13rem;
+            right: 2%;   
+        }
+
+        @include respond(tab-mini-land) {
+            top: -5rem;
+            right: 2rem;
+            width: 30rem;
+        }
+
+        @include respond(tab-port) {
+            display: none;
+        }
+    }
+}

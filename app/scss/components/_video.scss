@@ -1,0 +1,60 @@
+.video {
+    position: absolute;
+    left: 0;
+    top: -8%;
+    min-width: 100%;
+    min-height: 100vh;
+    z-index: -1;
+
+    @include respond(big-desktop) {
+		left: -14%;
+        top: 0;
+	}
+
+    @include respond(tab-land) {
+        left: -20%;
+        top: -30%;   
+    }
+
+    @include respond(tab-port) {
+        left: -15%;
+        top: 0;
+        width: 130%;
+        min-height: auto;
+    }
+
+    @include respond(phone) {
+        width: 176%;
+        left: -35%;
+    }
+
+    @include respond(phone-small) {
+        width: 225%;
+        left: -60%;
+    }
+
+    @include respond(phone-smaller) {
+        width: 216%;
+        left: -55%;
+    }
+
+    @include respond(mini-phone) {
+		width: 225%;
+        left: -60%;
+	}
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 6rem;
+
+        @include respond(tab-port) {
+            margin-top: 4rem;
+        }
+    }
+
+    &__bar {
+        width: 0;
+    }
+}

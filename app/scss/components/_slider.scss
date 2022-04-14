@@ -1,0 +1,173 @@
+.slider {
+    position: relative;
+
+    &__slide-inner {
+        width: 95%;
+        background-color: $color-grey-dark;
+        border-radius: $main-border;
+    }
+
+    &__content {
+        padding-left: 3.5rem;
+
+        @include respond(phone-small) {
+            padding-left: 2rem;      
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+
+    &__place {
+        font-size: $default-font-size;
+        opacity: $main-opacity;
+        font-weight: 700;
+        padding-top: 3rem;
+    }
+
+    &__title {
+        padding-top: 1rem;
+    }
+
+    &__down-content {
+        display: flex;
+        padding-top: 3rem;
+        justify-content: space-between;
+        align-items: center;
+
+        @include respond(mini-phone) {
+            padding-top: 2rem;
+        }
+    }
+
+    &__date {
+        font-weight: 700;
+        font-size: $normal-font-size;
+        text-transform: uppercase;
+        opacity: $main-opacity;
+
+        @include respond(mini-phone) {
+            font-size: $small-font-size;
+        }
+    }
+
+    &__btn {
+        text-transform: uppercase;
+        border: none;
+        color: $color-white;
+        font-weight: 700;
+        border-radius: $main-border;
+        background-color: $color-purple;
+        padding: 1.8rem 5.2rem;
+        cursor: pointer;
+        transition: all .3s;
+
+        @include respond(phone-small) {
+            padding: 1.5rem 3rem;       
+        }
+
+        @include respond(mini-phone) {
+            font-size: $normal-font-size;
+            padding: 1.5rem 2.5rem;
+        }
+
+        &:hover {
+            border-radius: 0 0 3rem 0;
+        }
+    }
+}
+
+.track__slider .slick-arrow{
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+}
+
+.track__slider .slick-arrow.slick-prev,
+.track__slider .slick-arrow.slick-next {
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    border: 1px solid $color-white;
+    color: $color-white;
+    opacity: .7;
+    width: 4rem;
+    height: 6rem;
+    border-radius: $small-border;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    @include image-set;
+    transition: all .3s;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.track__slider .slick-arrow.slick-prev {
+    left: -8rem;
+    background-image: url('../images/slider/arrow-prev.png');
+
+    @include respond(tab-port) {
+        left: -6rem;
+    }
+
+    @include respond(phone) {
+        left: 3rem;
+    }
+}
+
+.track__slider .slick-arrow.slick-next {
+    right: -8rem;
+    background-image: url('../images/slider/arrow-next.png');
+
+    @include respond(tab-port) {
+        right: -6rem;
+    }
+
+    @include respond(phone) {
+        right: 3rem;
+    }
+}
+
+.track__slider .slider__slide {
+    width: 95% !important;
+    transform: translateX(5%);
+
+    @include respond(phone) {
+        width: 60% !important;
+        transform: translateX(35%);
+    }
+
+    @include respond(mini-phone) {
+        width: 75% !important;
+        transform: translateX(20%);
+    }
+}
+
+.track__slider .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.track__slider .slick-dots li {
+    list-style: none;
+    margin: 2rem .5rem 0 .5rem;
+}
+
+.track__slider .slick-dots li.slick-active button {
+    background-color: $color-purple;
+}
+
+.track__slider .slick-dots button {
+    font-size: 0;
+    border-radius: 50%;
+    width: 1.1rem;
+    height: 1rem;
+    background-color: $color-white;
+    border: none;
+}

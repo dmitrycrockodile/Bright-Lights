@@ -1,0 +1,17 @@
+.audio {
+
+    &__controls {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__bar {
+        width: 0;
+    }
+
+    &__timing {
+        width: 7rem;
+        text-align: center;
+    }
+}

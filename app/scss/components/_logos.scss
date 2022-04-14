@@ -1,0 +1,28 @@
+.logos {
+    display: flex;
+    align-items: center;
+
+    :first-child {
+        margin-right: 2rem;
+
+        @include respond(tab-mini-land) {
+            width: 7rem;
+        }
+
+        @include respond(tab-port) {
+            width: 6rem;
+        }
+    }
+
+    :last-child {
+        margin-top: 5%;
+
+        @include respond(tab-mini-land) {
+            width: 15rem;
+        }
+
+        @include respond(tab-port) {
+            width: 13rem;
+        }
+    }
+}
